@@ -9,7 +9,7 @@ to be loaded and instantiated by `@anywhichway/quick-component`.
 Insert this line into your HTML file:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@anywhichway/quick-component.js" component="https://cdn.jsdelivr.net/npm/@anywhichway/math-science-formula@0.0.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/@anywhichway/quick-component.js" component="https://cdn.jsdelivr.net/npm/@anywhichway/math-science-formula@0.0.2"></script>
 ```
 
 Version numbers are used above to insulate your use from unexpected changes due to future enhancements. You can also use
@@ -40,17 +40,9 @@ For example:
 </math-science-formula>
 ```
 
-# Dynamic Updates
-
-By changing the slot value and calling `render` you can re-use the tag with other arguments.
-
-```javascript
-const computer = document.getElementById("myeval"),
-    slot = computer.querySelector("[slot]");
-slot.innerText = "2 - 2";
-computer.render();
-```
+Use the element's style attribute to determine inline or block layout, not the typical '[' or '(' used with LaTEX.
 
 # Version History (reverse chronological order)
 
+2022-09-19 v0.0.2 Improved rendering to shadowDOM. Updated documentation.
 2022-09-18 v0.0.1 First public commit
