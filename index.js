@@ -1,4 +1,4 @@
-const self = window.currentComponent(import.meta.url);
+//const self = window.currentComponent(import.meta.url);
 
 self.properties({
     render() {

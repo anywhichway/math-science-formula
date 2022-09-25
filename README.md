@@ -44,6 +44,10 @@ Use the element's style attribute to determine inline or block layout, not the t
 
 # Version History (reverse chronological order)
 
+2022-09-25 v0.0.4 Updated for changes to quickComponent.
+
 2022-09-22 v0.0.3 Wrapped typeSetShadow in a try/catch block.
+
 2022-09-19 v0.0.2 Improved rendering to shadowDOM. Updated documentation.
-2022-09-18 v0.0.1 First public commit
+
+2022-09-18 v0.0.1 First public commit.
