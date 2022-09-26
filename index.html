@@ -8,7 +8,9 @@
             options: {
                 enableMenu: false,
                 menuOptions: {
-
+                    settings: {
+                        //assistiveMml: false
+                    }
                 }
             },
             svg: {
@@ -17,8 +19,8 @@
             loader: {
                 load: ["ui/safe",'[tex]/mhchem']
             },
-            text: {
-                packages: {'[+]': ['mhchem']}
+            tex: {
+                packages: {'[+]': ['mhchem']} //
             },
             startup: {
                 ready: () => {
@@ -104,6 +106,14 @@
                         html.render();
                         return html;
                     }
+                   MathJax.typesetShadowPromise = function (root) {
+                        const InputJax = startup.getInputJax();
+                        const OutputJax = startup.getOutputJax();
+                        const html = mathjax.document(root, {InputJax, OutputJax});
+                        MathJax._.mathjax.mathjax.handleRetriesFor(() => {
+                           html.render();
+                        });
+                    }
 
                     //
                     //  Now do the usual startup now that the extensions are in place
@@ -113,7 +123,9 @@
             }
         }
     </script>
-    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <!--script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script -->
+    <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg-full.js"></script>
+
 </head>
 <body>
 <script type="module" src="./index.js"></script>

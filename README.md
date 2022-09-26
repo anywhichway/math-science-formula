@@ -9,7 +9,7 @@ to be loaded and instantiated by `@anywhichway/quick-component`.
 Insert this line into your HTML file:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@anywhichway/quick-component.js" component="https://cdn.jsdelivr.net/npm/@anywhichway/math-science-formula@0.0.2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@anywhichway/quick-component.js" component="https://cdn.jsdelivr.net/npm/@anywhichway/math-science-formula@0.0.5"></script>
 ```
 
 Version numbers are used above to insulate your use from unexpected changes due to future enhancements. You can also use
@@ -43,6 +43,8 @@ For example:
 Use the element's style attribute to determine inline or block layout, not the typical '[' or '(' used with LaTEX.
 
 # Version History (reverse chronological order)
+
+2022-09-25 v0.0.5 Improved async loading of MathJax support libraries.
 
 2022-09-25 v0.0.4 Updated for changes to quickComponent.
 

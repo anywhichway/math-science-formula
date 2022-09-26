@@ -1,0 +1,24 @@
+{
+  "name": "@anywhichway/math-science-formula",
+  "version": "0.0.5",
+  "description": "A web component for rendering math and chemical formulas",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anywhichway/math-science-formula.git"
+  },
+  "keywords": [
+    "KaTex",
+    "LaTex",
+    "MathJS"
+  ],
+  "author": "Simon Y. Blackwell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anywhichway/math-science-formula/issues"
+  },
+  "homepage": "https://github.com/anywhichway/math-science-formula#readme"
+}
