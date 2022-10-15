@@ -1,5 +1,5 @@
 # math-science-formula
-A web component for rendering LaTex based math and chemical formulas.
+A web component for rendering LaTeX based math and chemical formulas.
 
 # Usage
 
@@ -40,9 +40,11 @@ For example:
 </math-science-formula>
 ```
 
-Use the element's style attribute to determine inline or block layout, not the typical '[' or '(' used with LaTEX.
+Use the element's style attribute to determine inline or block layout, not the typical '[' or '(' used with LaTeX.
 
 # Version History (reverse chronological order)
+
+2022010-15 v0.0.6 Added default display of 'Empty LaTex Expression' when the tag does not wrap anything
 
 2022-09-25 v0.0.5 Improved async loading of MathJax support libraries.
 

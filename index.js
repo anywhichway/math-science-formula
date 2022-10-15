@@ -2,14 +2,22 @@
 let promise = Promise.resolve();
 
 self.properties({
-    render() {
+    connected() {
+        this.innerHTML ||= "\\";
+    },
+    async render() {
+        if(this.innerHTML==="\\") {
+            this.shadowRoot.innerHTML = '<i style="font-weight:lighter">Empty LaTex Expression</i>';
+            this.setAttribute("title","Empty LaTex Expression");
+            return;
+        }
         const open = this.style.display==="block" ? "[" : "(",
             close = this.style.display==="block" ? "]" : ")";
         this.shadowRoot.innerHTML =
             '<mjx-doc><mjx-head></mjx-head><mjx-body>\\' + open + this.innerHTML + '\\' + close + '</mjx-body></mjx-doc>';
         try {
            // MathJax.typesetShadow(this.shadowRoot);
-            promise.then(() => MathJax.typesetShadowPromise(this.shadowRoot))
+           await promise.then(() => MathJax.typesetShadowPromise(this.shadowRoot))
                 .catch((e) => console.log(e));
         } catch(e) {
             console.log(e);

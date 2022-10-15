@@ -1,6 +1,6 @@
 {
   "name": "@anywhichway/math-science-formula",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A web component for rendering math and chemical formulas",
   "main": "index.html",
   "scripts": {
